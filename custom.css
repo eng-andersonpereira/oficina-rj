@@ -1,0 +1,48 @@
+/* Ajustes da RJ Manutenções e Peças. Carregado depois do style.css. */
+:root {
+    --accent-color: #c2410c;
+    --gradient-accent: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+}
+
+.logo { font-size: 1.15rem; }
+.logo img { height: 48px; width: auto; border-radius: 50%; }
+
+.hero { min-height: auto; padding: 130px 0 90px; }
+.hero-title .highlight, .stat-item i { color: #fb923c; }
+.hero-circle { background: #fff; }
+.hero-circle img { object-fit: contain; padding: 10px; }
+
+.btn-whats { background: #16a34a; color: #fff; box-shadow: var(--shadow-md); }
+.btn-whats:hover { background: #15803d; transform: translateY(-2px); }
+.contact-card .btn { margin-top: 15px; }
+.contact-card a:not(.btn) { color: var(--primary-color); font-weight: 600; word-break: break-word; }
+
+/* Fotos do cliente são pequenas: limitar o tamanho para não borrar */
+.about-content { grid-template-columns: 0.8fr 1.2fr; }
+.about-image img { max-width: 380px; margin: 0 auto; }
+.gallery-grid { grid-template-rows: none; grid-auto-rows: 340px; }
+.gallery-large { grid-column: span 1; grid-row: span 1; }
+
+.map-wrap { margin-top: 40px; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-md); }
+.map-wrap iframe { display: block; width: 100%; height: 360px; border: 0; }
+
+.whatsapp-float {
+    position: fixed; bottom: 30px; right: 30px; z-index: 999;
+    width: 58px; height: 58px; border-radius: 50%;
+    background: #25d366; color: #fff; font-size: 2rem;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: var(--shadow-lg);
+}
+.scroll-to-top { bottom: 100px; }
+
+@media (max-width: 1024px) {
+    .about-content { grid-template-columns: 1fr; }
+    .gallery-grid { grid-auto-rows: 260px; }
+}
+
+@media (max-width: 768px) {
+    .logo span { font-size: 1rem; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
+    .whatsapp-float { bottom: 20px; right: 20px; }
+    .scroll-to-top { bottom: 90px; right: 20px; }
+}
